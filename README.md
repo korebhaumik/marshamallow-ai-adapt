@@ -88,11 +88,11 @@ python -m flask run
 
 ## API Endpoints
 
-| Method | Endpoint         | Description                  |
-|--------|----------------- |------------------------------|
-| GET    | `/`              | Health check endpoint        |
-| POST   | `/chatdoctor`    | Process user query           |
-| POST   | `/chatrestaurant`| Fetch graph data from Neo4j  |
+| Method | Endpoint         | Description                          |
+|--------|----------------- |------------------------------        |
+| GET    | `/`              | Health check endpoint                |
+| POST   | `/chatdoctor`    | uses the neo4j graph of clinic       |
+| POST   | `/chatrestaurant`| uses the neo4j graph of restaurnant  |
 
 ---
 
