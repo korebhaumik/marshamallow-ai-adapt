@@ -54,6 +54,12 @@ export default function MessageSection({ currentAssistant }: Props) {
 						</div>
 					</>
 				))}
+				{isLoading && (
+					<div className="flex">
+						<div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-stone-500"></div>
+						<p className=" ml-2">Thinking...</p>
+					</div>
+				)}
 				{messages.length === 0 && <EmptyMessage currentAssistant={currentAssistant} />}
 			</div>
 			<div ref={bottomRef} className="" />
