@@ -22,7 +22,7 @@ export default function EmptyMessage({ currentAssistant }: Props) {
 						<li className="flex cursor-pointer hover:underline underline-offset-4">
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">
-								What dishes do you offer that are vegetarian/gluten-free?
+								What dishes do you offer that are vegetarian, gluten-free?
 							</span>
 						</li>
 						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
@@ -51,11 +51,11 @@ export default function EmptyMessage({ currentAssistant }: Props) {
 					<ul className="pt-3 text-zinc-700">
 						<li className="flex cursor-pointer hover:underline underline-offset-4">
 							<RightArrowSVG />
-							<span className="ml-2 w-fit">What are the symptoms of a common cold/flu?</span>
+							<span className="ml-2 w-fit">What are the symptoms of a common cold or flu?</span>
 						</li>
 						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
 							<RightArrowSVG />
-							<span className="ml-2 w-fit">How can I relieve a headache/muscle pain?</span>
+							<span className="ml-2 w-fit">How can I relieve a muscle pain?</span>
 						</li>
 						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
 							<RightArrowSVG />
