@@ -60,7 +60,9 @@ export default function MessageSection({ currentAssistant }: Props) {
 						<p className=" ml-2">Thinking...</p>
 					</div>
 				)}
-				{messages.length === 0 && <EmptyMessage currentAssistant={currentAssistant} />}
+				{messages.length === 0 && (
+					<EmptyMessage setInput={setInput} currentAssistant={currentAssistant} />
+				)}
 			</div>
 			<div ref={bottomRef} className="" />
 

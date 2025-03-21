@@ -23,20 +23,20 @@ export default function ChatInput({
 	setMessages,
 	messages,
 	reload,
+	input,
 }: Props) {
 	// const Microphone = dynamic(() => import("./microphone"), { ssr: false });
 
 	const [file, setFile] = useState<File | null>(null);
 	const [fileText, setFileText] = useState("");
-	const [temp, setTemp] = useState<string>("");
+	// const [temp, setTemp] = useState<string>("");
 
 	const submit = async () => {
-		if (!temp) return;
-		setInput(temp);
+		if (!input) return;
 		setMessages([
 			...messages,
 			{
-				content: JSON.stringify({ input: temp, file: fileText }),
+				content: JSON.stringify({ input, file: fileText }),
 				role: "user",
 				id: "temp",
 			},
@@ -47,10 +47,10 @@ export default function ChatInput({
 		setMessages(tempMessageArray);
 		await append({
 			// content: `You: ${input}`,
-			content: JSON.stringify({ input: temp, file: fileText }),
+			content: JSON.stringify({ input, file: fileText }),
 			role: "user",
 		});
-		setTemp("");
+		// setTemp("");
 		setInput("");
 	};
 
@@ -106,10 +106,10 @@ export default function ChatInput({
 					<input
 						type="text"
 						placeholder="i mmm happy to help you, enter your query : )"
-						value={temp}
+						value={input}
 						className="w-full px-4 py-2 text-sm border-none rounded-none outline-none placeholder-zinc-500 bg-inherit"
 						onChange={(e) => {
-							setTemp(e.target.value);
+							// setTemp(e.target.value);
 							setInput(e.target.value);
 						}}
 						onKeyDown={(e) => {

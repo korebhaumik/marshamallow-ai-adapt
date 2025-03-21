@@ -2,9 +2,10 @@ import React from "react";
 
 type Props = {
 	currentAssistant: string;
+	setInput: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export default function EmptyMessage({ currentAssistant }: Props) {
+export default function EmptyMessage({ setInput, currentAssistant }: Props) {
 	return (
 		<>
 			{currentAssistant === "Restro AI Assistant" ? (
@@ -19,19 +20,28 @@ export default function EmptyMessage({ currentAssistant }: Props) {
 						You can start a conversation here or try the following examples:
 					</p>
 					<ul className="pt-3 text-zinc-700">
-						<li className="flex cursor-pointer hover:underline underline-offset-4">
+						<li
+							className="flex cursor-pointer hover:underline underline-offset-4"
+							onClick={() => setInput("What dishes do you offer that are vegetarian, gluten-free?")}
+						>
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">
 								What dishes do you offer that are vegetarian, gluten-free?
 							</span>
 						</li>
-						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
+						<li
+							className="flex mt-2 cursor-pointer hover:underline underline-offset-4"
+							onClick={() => setInput("Can you recommend a meal combo based on my preferences?")}
+						>
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">
 								Can you recommend a meal combo based on my preferences?
 							</span>
 						</li>
-						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
+						<li
+							className="flex mt-2 cursor-pointer hover:underline underline-offset-4"
+							onClick={() => setInput("How long will it take for my order to be ready?")}
+						>
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">How long will it take for my order to be ready?</span>
 						</li>
@@ -49,15 +59,24 @@ export default function EmptyMessage({ currentAssistant }: Props) {
 						You can start a conversation here or try the following examples:
 					</p>
 					<ul className="pt-3 text-zinc-700">
-						<li className="flex cursor-pointer hover:underline underline-offset-4">
+						<li
+							className="flex cursor-pointer hover:underline underline-offset-4"
+							onClick={() => setInput("What are the symptoms of a common cold or flu?")}
+						>
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">What are the symptoms of a common cold or flu?</span>
 						</li>
-						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
+						<li
+							className="flex mt-2 cursor-pointer hover:underline underline-offset-4"
+							onClick={() => setInput("How can I relieve a muscle pain?")}
+						>
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">How can I relieve a muscle pain?</span>
 						</li>
-						<li className="flex mt-2 cursor-pointer hover:underline underline-offset-4">
+						<li
+							className="flex mt-2 cursor-pointer hover:underline underline-offset-4"
+							onClick={() => setInput("What are the side effects of common medications?")}
+						>
 							<RightArrowSVG />
 							<span className="ml-2 w-fit">What are the side effects of common medications?</span>
 						</li>
