@@ -61,24 +61,24 @@ export default function EmptyMessage({ setInput, currentAssistant }: Props) {
 					<ul className="pt-3 text-zinc-700">
 						<li
 							className="flex cursor-pointer hover:underline underline-offset-4"
-							onClick={() => setInput("What are the symptoms of a common cold or flu?")}
+							onClick={() => setInput("Which doctors are available on Monday?")}
 						>
 							<RightArrowSVG />
-							<span className="ml-2 w-fit">What are the symptoms of a common cold or flu?</span>
+							<span className="ml-2 w-fit">Which doctors are available on Monday?</span>
 						</li>
 						<li
 							className="flex mt-2 cursor-pointer hover:underline underline-offset-4"
-							onClick={() => setInput("How can I relieve a muscle pain?")}
+							onClick={() => setInput("Can I book an appointment with Dr. Abhijeet for Friday 2pm?")}
 						>
 							<RightArrowSVG />
-							<span className="ml-2 w-fit">How can I relieve a muscle pain?</span>
+							<span className="ml-2 w-fit">Can I book an appointment with Dr. Abhijeet for Friday 2pm?</span>
 						</li>
 						<li
 							className="flex mt-2 cursor-pointer hover:underline underline-offset-4"
-							onClick={() => setInput("What are the side effects of common medications?")}
+							onClick={() => setInput("What is the consultation fee for a general check-up?")}
 						>
 							<RightArrowSVG />
-							<span className="ml-2 w-fit">What are the side effects of common medications?</span>
+							<span className="ml-2 w-fit">What is the consultation fee for a general check-up?</span>
 						</li>
 					</ul>
 				</div>
