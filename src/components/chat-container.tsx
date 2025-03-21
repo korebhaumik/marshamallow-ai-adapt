@@ -20,7 +20,10 @@ export default function MessageSection({ currentAssistant }: Props) {
 			promptCount: 10,
 		},
 		// api: "/api/chat",
-		api: process.env.NEXT_PUBLIC_SERVER_URL || "",
+		api:
+			currentAssistant === "Restro AI Assistant"
+				? `${process.env.NEXT_PUBLIC_SERVER_URL}/chatrestaurant`
+				: `${process.env.NEXT_PUBLIC_SERVER_URL}/chatdoctor`,
 		onResponse(response: {
 			status: number;
 			statusText: Renderable | ValueFunction<Renderable, Toast>;
